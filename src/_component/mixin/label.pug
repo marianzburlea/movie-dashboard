@@ -1,0 +1,6 @@
+mixin label(icon, size, to)
+  label(class=`label ${attributes.size}` for=attributes.to)
+    span(class=`md-${attributes.icon}`)
+    if icon
+    if block
+      block

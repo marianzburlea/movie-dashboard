@@ -1,0 +1,26 @@
+{
+  "title": "My account",
+  "collapsed": true,
+  "menuLinkList": [
+    {
+      "label": "Menu item 1",
+      "icon": "card"
+    },
+    {
+      "label": "Menu item 2",
+      "icon": "clock"
+    },
+    {
+      "label": "Menu item 3",
+      "icon": "bonus"
+    },
+    {
+      "label": "Menu item 4",
+      "icon": "user"
+    },
+    {
+      "label": "Menu item 5",
+      "icon": "speak"
+    }
+  ]
+}

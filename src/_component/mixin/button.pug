@@ -1,0 +1,5 @@
+mixin button(size, type, label, icon)
+  - var classList = [size, type, icon ? `md-${icon}` : ''].filter(Boolean).join(' ')
+  button.button(
+    class=classList
+  )= icon ? '' : label
