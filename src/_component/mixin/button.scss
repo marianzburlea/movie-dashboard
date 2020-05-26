@@ -1,4 +1,4 @@
-button {
+.button {
   border: 0;
   border-radius: 6px;
   text-transform: uppercase;
@@ -7,8 +7,30 @@ button {
   color: white;
   padding: 0 24px;
 
+  &.full {
+    width: 100%;
+  }
+
   &.primary {
     background-color: var(--action-green);
+  }
+
+  &.round {
+    background-color: var(--background-light);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    font-size: 12px;
+    margin-right: 4px;
+  }
+
+  &.md-play::before {
+    position: absolute;
   }
 
   &.secondary {
@@ -29,5 +51,94 @@ button {
 
   &.xxl {
     height: 44px;
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+.animated {
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
+}
+
+@keyframes shake {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  74% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75%,
+  77%,
+  79%,
+  81%,
+  83%,
+  85%,
+  89%,
+  91%,
+  93%,
+  95% {
+    transform: translate3d(-5px, 5px, 0);
+  }
+
+  80%,
+  82%,
+  84%,
+  86%,
+  88%,
+  90%,
+  92%,
+  94% {
+    transform: translate3d(5px, -5px, 0);
+  }
+
+  96% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.shake {
+  animation-name: shake;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+
+@keyframes slide {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }

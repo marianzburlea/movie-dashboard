@@ -1,0 +1,39 @@
+.dashboard
+  +cutCornerPanel('movies-watched')
+    .cut-corner-panel__title movies watched
+    .cut-corner-panel__body
+      label.dashboard__action-top-right(for="modal-add-new-movie") Add new movie
+      .dashboard__hero 1,846
+    .cut-corner-panel__footer
+      +button("l", "primary full animated shake", "big green button")
+
+  +cutCornerPanel('my-coupons')
+    .cut-corner-panel__title my coupons
+    .cut-corner-panel__body
+    .cut-corner-panel__footer
+
+  +cutCornerPanel('moare tac-tu')
+    .cut-corner-panel__title popular movies
+    .cut-corner-panel__body-auto
+      .movie__list
+        each movie, key in data.movies
+          .movie__grid
+            .movie__thumb
+              img(src=`${movie.thumb}?${key}`, alt=movie.title, width="90" height="48")
+            .movie__info
+              .movie__title=movie.title
+              .movie__year=movie.year
+            .movie__play
+              +button("m", "round", "button", "play")
+
+    .cut-corner-panel__footer
+
+  input(type="checkbox" id="te-n-dinti")
+  +cutCornerPanel('animated flip')
+    div
+    .cut-corner-panel__body
+      .smiley-icon
+      .card-title JUST A RANDOM CARD
+      div.card-description Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+    .cut-corner-panel__footer
+      +label(size="not-so-large outlined", icon="", to="te-n-dinti") click to flip the card

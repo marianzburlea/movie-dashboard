@@ -1,0 +1,14 @@
+input(
+  type="checkbox"
+  name="modal-add-new-movie"
+  id="modal-add-new-movie"
+)
+
+label(for="modal-add-new-movie").modal
+  .modal__wrapper.animated
+    .modal__title Add new movie
+    .modal__body
+      input.modal__input(type="text", name="name", placeholder="Movie Name")
+      input.modal__input(type="text", name="year", placeholder="Movie year")
+      +button("l", "secondary", "cancel")
+      +button("l", "primary", "add movie")

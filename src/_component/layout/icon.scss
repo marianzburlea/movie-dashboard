@@ -1,19 +1,19 @@
 @import "variable";
 
 @font-face {
-  font-family: '#{$icomoon-font-family}';
-  src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?42b3bh') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?42b3bh') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?42b3bh##{$icomoon-font-family}') format('svg');
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?42b3bh1") format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?42b3bh1") format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?42b3bh1##{$icomoon-font-family}") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="md-"], [class*=" md-"] {
+[class^="md-"],
+[class*=" md-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
+  font-family: "#{$icomoon-font-family}" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -28,42 +28,46 @@
 
 .md-clock {
   &:before {
-    content: $md-clock; 
+    content: $md-clock;
   }
 }
 .md-film {
   &:before {
-    content: $md-film; 
+    content: $md-film;
   }
 }
 .md-plus {
   &:before {
-    content: $md-plus; 
+    content: $md-plus;
   }
 }
 .md-chevron-right {
   &:before {
-    content: $md-chevron-right; 
+    content: $md-chevron-right;
   }
 }
 .md-speak {
   &:before {
-    content: $md-speak; 
+    content: $md-speak;
   }
 }
 .md-user {
   &:before {
-    content: $md-user; 
+    content: $md-user;
   }
 }
 .md-bonus {
   &:before {
-    content: $md-bonus; 
+    content: $md-bonus;
   }
 }
 .md-card {
   &:before {
-    content: $md-card; 
+    content: $md-card;
   }
 }
-
+.md-play {
+  &:before {
+    content: $md-play;
+  }
+}

@@ -60,7 +60,7 @@
   &__star {
     width: 24px;
     height: 24px;
-    background-image: url(/asset/image/star.svg);
+    background-image: url(#{$baseUrl}asset/image/star.svg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

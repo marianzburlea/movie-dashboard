@@ -1,0 +1,62 @@
+#modal-add-new-movie {
+  visibility: hidden;
+
+  &:checked + {
+    & .modal {
+      display: flex;
+      visibility: visible;
+    }
+
+    & .modal .modal__wrapper {
+      animation-name: slide;
+    }
+  }
+}
+
+.modal {
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__title {
+    background-color: var(--dark-background);
+    color: white;
+    font-size: 18px;
+    height: 60px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+
+    & .modal__input {
+      grid-column: 1/3;
+    }
+  }
+
+  &__input {
+    border: 1px solid var(--background-light);
+    background-color: var(--background-light-hover);
+    border-radius: 6px;
+    padding: 0 1rem;
+  }
+}
