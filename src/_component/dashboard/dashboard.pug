@@ -10,7 +10,15 @@
   +cutCornerPanel('my-coupons')
     .cut-corner-panel__title my coupons
     .cut-corner-panel__body
-    .cut-corner-panel__footer
+      .coupon__list
+        each coupon in data.coupons
+          .coupon__grid
+            .coupon__ticket
+            .coupon__info
+              .coupon__title=coupon.title
+              .coupon__expires=coupon.expires
+            .coupon__action
+              +button("m", "primary", "button")
 
   +cutCornerPanel('moare tac-tu')
     .cut-corner-panel__title popular movies

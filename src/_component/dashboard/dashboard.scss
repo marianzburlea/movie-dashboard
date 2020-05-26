@@ -105,3 +105,56 @@
     background-color: var(--background-light-hover);
   }
 }
+
+// Coupon
+
+.coupon__grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto 1fr auto;
+  height: 85px;
+  position: relative;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 0 20px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover::before {
+    transform: scaleX(1.5) skewX(45deg);
+  }
+
+  &::before {
+    transform: scaleX(0) skewX(45deg);
+    content: "";
+    position: absolute;
+    transition: 500ms;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--ticket-hover);
+    z-index: -1;
+  }
+}
+
+.coupon__ticket {
+  background-image: url(#{$baseUrl}asset/image/ticket.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 24px;
+}
+
+.coupon__action,
+.coupon__info {
+  align-self: center;
+}
+
+.coupon__title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.coupon__expires {
+  font-size: 12px;
+}
