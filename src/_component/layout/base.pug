@@ -3,11 +3,19 @@ html(lang="en")
   head
     title Welcome to Pug Starter
     meta(content="Simple pug (jade) starter aimed to quickly deliver HTML & CSS projects" name="description")
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    )
     //- this checks to see the the "embed" property is set to "true"
     //- in the package.json file
     if config.entry.css.embed
       link(rel="stylesheet" href=`${embedPath}` embed)
   body
+    .mobile
+      p You are visiting the mobile verion.
+      p The designers are working tirelessly to provide you with the best experience possible.
+      p Please come back later or watch from a desktop!
     .content
       block awesome-content
     //- The style.css is at the bottom so it doesn't
